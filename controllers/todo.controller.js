@@ -45,3 +45,14 @@ exports.updateTodo = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
+
+ exports.deleteAllTodos = async(req,res)=>{
+    try{
+    const todo = await Todo.deleteMany({});
+    res.status(200).json({ message: "All todos deleted successfully" });
+    }
+    catch(err){
+        res.status(500).json({ error: err.message });
+    }
+ }
