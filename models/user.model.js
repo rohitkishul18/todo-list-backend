@@ -23,7 +23,10 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true
-    }
+    },
+   hasAccess: { type: Boolean, default: false }, 
+  subscriptionId: { type: String, default: null }, 
+  customerId: { type: String, default: null },
   },
   { timestamps: true }
 );
