@@ -35,7 +35,7 @@ exports.createCheckoutSession = async (req, res) => {
         userId: user._id.toString(),
         plan: "monthly",
       },
-      success_url: `${process.env.FRONTEND_URL}/todos?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${process.env.FRONTEND_URL}/todos?success=true`,
       cancel_url: `${process.env.FRONTEND_URL}/login`,
     });
 
